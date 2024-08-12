@@ -3,6 +3,17 @@ import re
 def camel_to_title(camel_str):
     """
     Convert camel case string to title case
+
+    ----------
+    Parameters:
+    camel_str: str
+        Camel case string to be converted to title case
+    
+    ----------
+    Returns:
+    title_str: str
+        Title case string
+
     """
     title_str = re.sub(r'(?<!^)(?=[A-Z])', ' ', camel_str)
     title_str = title_str.title()
@@ -11,6 +22,11 @@ def camel_to_title(camel_str):
 def format_columns(df):
     """
     Format DataFrame column names to title case with custom formatting.
+
+    ----------
+    Parameters:
+    df: pd.DataFrame
+        DataFrame containing the data to be formatted
     """
     formatted_columns = {}
     for col in df.columns:
@@ -55,7 +71,7 @@ def update_plot_layout(plot, selected_metric, axis='y'):
             yaxis=dict(
                 title_text=f'{selected_metric} (difference in %)',
                 ticksuffix='%',
-                title_font=dict(size=16),
+                title_font=dict(size=14),
                 tickfont=dict(size=14),
                 showgrid=False,
                 zeroline=False,

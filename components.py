@@ -88,7 +88,7 @@ def create_histogram(df, selected_metric, min_year, max_year):
                              x=selected_metric,
                              color='Year',
                              color_discrete_sequence=year_colors,
-                             opacity=0.5,
+                             opacity=0.3,
                              title=f'{selected_metric} Histogram {min_year}-{max_year}',
                             )
     update_plot_layout(histogram, selected_metric, axis='x')
